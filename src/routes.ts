@@ -4,8 +4,13 @@ import CreateCourseService from './CreateCourseService';
 export function createCourse(request: Request, response: Response) {
   CreateCourseService.execute({
     name: "NodeJS", 
-    duration: 10, 
-    educator: "Dani"
+    educator: "Dani",
+    duration: 10
+  });
+
+  CreateCourseService.execute({
+    name: "ReactJS", 
+    educator: "Diego"
   });
 
   return response.send();
